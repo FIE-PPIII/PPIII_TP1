@@ -19,6 +19,7 @@ private:
     unsigned long int total;
 public:
     Document(int date, Client * client);
+    Document(int date, const Client * client);
     virtual ~Document();
     int getDate();
     const Client* getClient();

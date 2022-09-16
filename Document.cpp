@@ -9,4 +9,8 @@ Document::Document(int date, Client *client) {
     this->client = client;
 }
 
+Document::Document(int date, const Client *client) {
+    this->client = (Client*) client;
+}
+
 Document::~Document() = default;
