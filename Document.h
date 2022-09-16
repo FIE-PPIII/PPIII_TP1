@@ -7,6 +7,7 @@
 
 #include <list>
 #include "CartItem.h"
+#include "Client.h"
 
 using namespace std;
 
@@ -17,7 +18,7 @@ private:
     list<CartItem> cart;
     unsigned long int total;
 public:
-    Document();
+    Document(int date, Client * client);
     virtual ~Document();
 };
 
