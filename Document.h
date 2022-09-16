@@ -20,7 +20,22 @@ private:
 public:
     Document(int date, Client * client);
     virtual ~Document();
+    int getDate();
+    const Client* getClient();
+    unsigned long int getTotal();
 };
+
+inline int Document::getDate() {
+    return this->date;
+}
+
+inline const Client* Document::getClient() {
+    return (const Client*) this->client;
+}
+
+inline unsigned long int Document::getTotal() {
+    return this->total;
+}
 
 
 #endif //BASE_CPP_DOCUMENT_H
