@@ -6,6 +6,7 @@
 #define BASE_CPP_DOCUMENT_H
 
 #include <list>
+#include "CartItem.h"
 
 using namespace std;
 
