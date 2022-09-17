@@ -16,15 +16,15 @@ private:
 public:
     Client(string name, int id);
     ~Client();
-    string getName();
-    int getId();
+    string getName() const;
+    int getId() const;
 };
 
-inline string Client::getName() {
+inline string Client::getName() const {
     return this->name;
 }
 
-inline int Client::getId() {
+inline int Client::getId() const {
     return this->id;
 }
 
