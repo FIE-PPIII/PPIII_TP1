@@ -12,7 +12,7 @@
 using namespace std;
 
 class Document {
-private:
+protected:
     int date;
     Client* client;
     list<CartItem> cart;
@@ -20,6 +20,7 @@ private:
 public:
     Document(int date, Client * client);
     Document(int date, const Client * client);
+    Document(Document * doc);
 
     virtual ~Document();
     int getDate();

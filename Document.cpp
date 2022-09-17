@@ -18,6 +18,18 @@ Document::Document(int date, const Client *client) {
     this->cart.clear();
 }
 
+Document::Document(Document * doc) {
+    this->date = doc->getDate();
+    this->client = (Client*) doc->getClient();
+    this->total = doc->total;
+    //std::copy(this->cart.begin(), this->cart.end(), doc->cart);
+    auto iter = doc->cart.begin();
+    for (int i = 0; i < doc->cart.size(); i++){
+        this->cart.push_front(iter.operator*());
+        iter.operator++();
+    }
+}
+
 Document::~Document() {
     this->cart.clear();
 }

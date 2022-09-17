@@ -17,6 +17,8 @@ public:
     Invoice(int date, Client* client);
     Invoice(Quote quote);
     ~Invoice();
+
+    unsigned long int calculateTax();
 };
 
 

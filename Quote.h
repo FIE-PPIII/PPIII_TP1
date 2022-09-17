@@ -16,6 +16,8 @@ public:
     Quote(int date, int expirationDate, Client * client);
     Quote(int date, Client * client);
     ~Quote();
+
+
 };
 
 
