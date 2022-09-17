@@ -13,4 +13,18 @@ Document::Document(int date, const Client *client) {
     this->client = (Client*) client;
 }
 
-Document::~Document() = default;
+Document::~Document() {
+    this->cart.clear();
+}
+
+void Document::addItem(const string& detail, unsigned int quantity, unsigned int price) {
+    this->cart.push_front(CartItem(detail, quantity, price));
+}
+
+void Document::addItem(CartItem item) {
+    this->cart.push_front(item);
+}
+
+void Document::clearCart() {
+    this->cart.clear();
+}

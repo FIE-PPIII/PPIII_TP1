@@ -20,10 +20,15 @@ private:
 public:
     Document(int date, Client * client);
     Document(int date, const Client * client);
+
     virtual ~Document();
     int getDate();
     const Client* getClient();
     unsigned long int getTotal();
+
+    void addItem(const string& detail, unsigned int quantity, unsigned int price);
+    void addItem(CartItem);
+    void clearCart();
 };
 
 inline int Document::getDate() {
@@ -37,6 +42,5 @@ inline const Client* Document::getClient() {
 inline unsigned long int Document::getTotal() {
     return this->total;
 }
-
 
 #endif //BASE_CPP_DOCUMENT_H
